@@ -7,11 +7,20 @@
   <li class="list-group-item">Thor</li>
 </ul> -->
 
-<h3>Héroe borrado <small class="text-danger"> XXXX </small> </h3>
-<h3>No ha borrado nada.</h3>
+<!-- Uso de ng-template -->
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <!-- El valor undefined en las interpolaciones no se muestra -->
+  <h3>Héroe borrado <small class="text-danger"> {{ deletedHero }} </small> </h3>
+</div>
+
+<ng-template #nothingWasDeleted>
+  <h3>No ha borrado nada.</h3>
+</ng-template>
 
 <button
-  class="btn btn-outline-danger">
+  *ngIf="heroNames.length > 0"
+  class="btn btn-outline-danger"
+  (click)="removeLastHero()">
   Borrar último héroe
 </button>
 
