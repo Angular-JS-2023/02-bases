@@ -9,11 +9,13 @@
   <dd>{{ age }}</dd>
 
   <td>Método:</td>
-  <dd>algun metodo</dd>
+  <!-- uso de interpolacion con un metodo -->
+  <dd>{{ getHeroDescription() }}</dd>
 
   <td>Capitalizado:</td>
-  <dd>nombre capitalizado</dd>
+  <!-- uso de interpolacion con get -->
+  <dd>{{ capitalizedName }}</dd>
 </dl>
 
-<button class="btn btn-primary mx-2">Cambiar Nombre</button>
-<button class="btn btn-primary">Cambiar Edad</button>
+<button class="btn btn-primary mx-2" (click)="changeHero()">Cambiar Nombre</button>
+<button class="btn btn-primary" (click)="changeAge()">Cambiar Edad</button>
