@@ -1,1 +1,27 @@
-<p>list works!</p>
+<h3>Listado de Héroes</h3>
+
+<!-- <ul class="mt-2 list-group">
+  <li class="list-group-item">Spiderman</li>
+  <li class="list-group-item">Ironman</li>
+  <li class="list-group-item">Hulk</li>
+  <li class="list-group-item">Thor</li>
+</ul> -->
+
+<h3>Héroe borrado <small class="text-danger"> XXXX </small> </h3>
+<h3>No ha borrado nada.</h3>
+
+<button
+  class="btn btn-outline-danger">
+  Borrar último héroe
+</button>
+
+<!-- Uso de directiva de *ngFor -->
+<ul class="mt-2 list-group">
+
+  <li
+    *ngFor="let name of heroNames"
+    class="list-group-item">
+    {{ name }}
+  </li>
+
+</ul>
