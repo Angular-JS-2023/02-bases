@@ -27,4 +27,10 @@ export class HeroComponent {
     this.age = 25;
   }
 
+  resetForm(): void {
+    this.name = 'ironman';
+    this.age = 45;
+    // El ciclo de deteccion de cambios no esta pendiente del uso del DOM
+  }
+
 }
