@@ -4,16 +4,37 @@
   <input
     class="form-control mb-2"
     type="text"
-    placeholder="Nombre"/>
+    placeholder="Nombre"
+    [(ngModel)]="character.name"
+    name="name" />
+
+    <!-- () => Es un evento -->
+    <!-- [] => Asociar un atributo -->
+
+    <!-- Caja de Bananas [()] -->
+    <!-- Asociamos un evento y atributo al mismo tiempo -->
+
+    <!-- Enviar por medio de angular [value] el valor desde ts -->
+    <!-- [value]="character.name" /> -->
 
   <input
     class="form-control mb-2"
     type="number"
-    placeholder="Poder"/>
+    placeholder="Poder"
+    [(ngModel)]="character.power"
+    name="power" />
+
+    <!-- El ngModel tiene que tener un name="" asociando -->
 
   <button
     class="btn btn-primary"
-    type="submit">
+    type="submit"
+    (click)="emitCharacter()">
     Agregar
   </button>
+
 </form>
+
+<br>
+
+<pre>{{ character | json }}</pre>
