@@ -14,3 +14,8 @@ ng g c heroes/hero --skip-tests
 ng g m dbz
 ```
 
+3. Para poder depurar en el navegador (Colocando en nuestro codigo la palabra debugger) - se podra poner breakpoints en el navegador y poder quitar debugger para
+continuar depurando
+```
+debugger;
+```

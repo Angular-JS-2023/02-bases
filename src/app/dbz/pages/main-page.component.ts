@@ -15,4 +15,9 @@ export class DbzMainPageComponent {
     { name: 'Vegeta', power: 7500 },
   ];
 
+  // Evento viene del Hijo
+  onNewCharacter(character: Character): void {
+    this.characters.push(character);
+  }
+
 }

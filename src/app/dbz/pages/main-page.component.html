@@ -9,7 +9,8 @@
   </div>
 
   <div class="col">
-    <dbz-add-character></dbz-add-character>
+    <!-- Enviar nuestro objeto de hijo a padre para que lo agrege a la lista -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
   </div>
 
 </div>
