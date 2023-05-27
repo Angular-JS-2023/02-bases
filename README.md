@@ -8,3 +8,9 @@ o (--skip-tests es para no añadir el .spec.ts)
 ```
 ng g c heroes/hero --skip-tests
 ```
+
+2. Creacion de Modulos (Crea carpeta y el module)
+```
+ng g m dbz
+```
+
