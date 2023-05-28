@@ -20,7 +20,7 @@ export class DbzService {
   ];
 
   // Evento viene del Hijo
-  onNewCharacter(character: Character): void {
+  addCharacter(character: Character): void {
     // const newCharacter: Character = { id: uuid(), name, power }
     const newCharacter: Character = { ...character, id: uuid() }
     this.characters.push(newCharacter);
@@ -35,7 +35,7 @@ export class DbzService {
     // El 1 son la cantidad a eliminar
   // }
 
-  onDeleteCharacterById(id: string): void {
+  deleteCharacterById(id: string): void {
     this.characters = this.characters.filter((character: Character) => character.id !== id);
   }
 
