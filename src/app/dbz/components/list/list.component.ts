@@ -14,15 +14,15 @@ export class ListComponent {
   // de que no se envien los datos
   @Input()
   public characterList: Character[] = [
-    { name: 'Trunks', power: 10 }
+    { id: 'ABC132', name: 'Trunks', power: 10 }
   ];
 
-
   @Output()
-  public positionCharacter: EventEmitter<number> = new EventEmitter();
+  public positionCharacter: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(index: number): void {
-    this.positionCharacter.emit(index);
+  onDeleteCharacter(id: string): void {
+    if (id === '') return;
+    this.positionCharacter.emit(id);
   }
 
 }
