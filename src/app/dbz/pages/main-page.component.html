@@ -5,7 +5,10 @@
 
   <div class="col">
     <!-- Enviar nuestra lista de padre a hijo -->
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list
+      [characterList]="characters"
+      (positionCharacter)="onDeleteCharacterById($event)">
+    </dbz-list>
   </div>
 
   <div class="col">

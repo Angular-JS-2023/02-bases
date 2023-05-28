@@ -20,4 +20,13 @@ export class DbzMainPageComponent {
     this.characters.push(character);
   }
 
+  // Evento desde el hijo
+  onDeleteCharacterById(index: number): void {
+    // this.characters = this.characters.filter((character: Character, positionCharacter: number) => positionCharacter !== index);
+
+    this.characters.splice(index, 1); // Eliminar un elemento del arreglo
+    // index es la posicion del elemento
+    // El 1 son la cantidad a eliminar
+  }
+
 }
